@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+   <link rel="stylesheet" type="text/css" href="css/page-header-format.css">
+   <link rel="stylesheet" type="text/css" href="css/login-format.css">
+   <meta charset="utf-8"/>
+   <div class ="pageMargin">
+      <title>generic-cask-page</title>
+      <ul class="firstHeader-ul">
+         <li><img style="float: left; margin: 15px 0px 0px 0px;margin-left: 5%" src="https://cdn.discordapp.com/attachments/865374253310279703/865568236421644308/I_C_O_N.png" alt="website-icon" width="150" height="50"></li>
+         <li><a class="firstHeader-li" class="firstHeader-li" style="margin-right: 5%" href="Home.html">BC20 Index</a></li>
+         <li><a class="firstHeader-li" href="login.html">Distillery Indexes</a></li>
+         <li><a class="firstHeader-li" href="committee.html">Regional Indexes</a></li>
+         <li><a class="firstHeader-li" href="news.html">Category Indexes</a></li>
+      </ul>
+      <nav>
+         <ul class="secondHeader-ul">
+            <div class = "centerHorizontalHeaderFormat">
+               <li><a class="secondHeader-li" href="music.html">Overview</a></li>
+               <li><a class="secondHeader-li" href="merch.html">Background</a></li>
+               <li><a class="secondHeader-li" href="forums.html">News & Research</a></li>
+            </div>
+         </ul>
+      </nav>
+      <div class ="loginForms">
+         <div class="userDataField">
+            <div class="centerFieldFormat">
+               <h1 style="font-size:400%;font-family:monospace;color:rgb(19, 19, 19);padding-top: 60px;">Log in to Cask Index</h1>
+               <div class="articleContent">
+                  <br>
+                  <form method="POST" action="/send" name="logInForm">
+                     <div class="fieldBox">
+                        <input type="text" name="usernameLOG" placeholder="username" class="txtField" id="usernametxtField"/>
+                     </div>
+                     <div class="fieldBox">
+                        <input type="text" name="passwordLOG" placeholder="password" class="txtField" id="passwordtxtField"/>
+                     </div>
+                     <div class="toggleBox">
+                        <input type="checkbox" name="passwordHideToggle1" id="passwordHideToggle1" class="toggleFormat" value="Hide password?">
+                        <label for="passwordHideToggle1">Hide password?</label><br>
+                     </div>
+                     <br>
+                     <div class="buttonBox">
+                        <button class="logInBtn" style="cursor:pointer;" type="submit" onclick="submit()">
+                           <p class="bodyTitle">LOG IN</p>
+                        </button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <div class="userDataField">
+            <div class="centerFieldFormat">
+               <p style="font-size:200%;font-family:monospace;color:rgb(19, 19, 19);">Don't have an account?</p>
+               <h1 style="font-size:400%;font-family:monospace;color:rgb(19, 19, 19);">Sign up to Cask Index</h1>
+               <div class="articleContent">
+                  <br>
+                  <form method="POST" action="/send" name="logInForm">
+                     <div class="fieldBox">
+                        <input type="text" name="usernameLOG" placeholder="username" class="txtField" id="usernametxtField"/>
+                     </div>
+                     <div class="fieldBox">
+                        <input type="text" name="passwordLOG" placeholder="password" class="txtField" id="passwordtxtField"/>
+                     </div>
+                     <div class="toggleBox">
+                        <input type="checkbox" name="passwordHideToggle2" id="passwordHideToggle2" class="toggleFormat" value="Hide password?">
+                        <label for="passwordHideToggle1">Hide password?</label><br>
+                     </div>
+                     <div class="fieldBox">
+                        <input type="email" name="emailLOG" placeholder="email" class="txtField" id="usernametxtField"/>
+                     </div>
+                     <div class="toggleBox">
+                        <input type="checkbox" name="subscribeToggle" id="subscribeToggle" class="toggleFormat" value="Subscribe to Newsletter?">
+                        <label for="subscribeToggle">Subscribe to Newsletter?</label><br>
+                     </div>
+                     <br>
+                     <div class="buttonBox">
+                        <button class="logInBtn" style="cursor:pointer;" type="submit" onclick="submit()">
+                           <p class="bodyTitle">LOG IN</p>
+                        </button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer">
+        <div class="footerBox1">
+            <img style="float: left; margin: 0px 0px 0px 0px;" src="https://cdn.discordapp.com/attachments/865374253310279703/865568236421644308/I_C_O_N.png" alt="website-icon" width="150" height="50">
+            <br>
+            <br>
+            <br>
+            <p class="bodyTitle">Iropesum fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd</p>
+            <div class="socialMediaButton">
+                <img style="float: left; margin: 0px 0px 0px 0px;" src="https://cdn.discordapp.com/attachments/865374253310279703/865705327260205137/unknown.png" width="150" height="50">
+            </div>
+        </div>
+        <div class="footerBox2">
+            <b><p style="font-size:225%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">About us</p></b>
+            <p class="bodyTitle">About</p>
+            <p class="bodyTitle">Contact</p>
+            <p class="bodyTitle">Blogs</p>
+            <p class="bodyTitle">Privacy Policy</p>
+        </div>
+        <div class="footerBox3">
+            <b><p style="font-size:225%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Contact Us</p></b>
+            <p class="bodyTitle">sales@caskindex.com</p>
+            <p class="bodyTitle">+gx-xxxxxx xxxxx</p>
+            <b><p class="bodyTitle">Subscribe To Our Newsletter</p></b>
+            <div class="subscribeBox">
+                <form method="POST" action="/send" name="subscribeForm">
+                <input type="text" name="email" placeholder="Email" class="subscribeTxtField" id="subscribeTxtField"/>
+                <button class="subscribeBtn" style="cursor:pointer;" type="submit" onclick="submit()">
+                    <p class="bodyTitle">Subscribe</p>
+                </button> 
+                </form>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

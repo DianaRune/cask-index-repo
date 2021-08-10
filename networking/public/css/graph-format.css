@@ -1,0 +1,63 @@
+.graphBox
+{
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: center;
+
+}
+.graphDetails
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    height: 100%;
+    width: 15%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+
+}
+.graphLeftDetailsBox
+{
+    justify-content: center;
+    background-color: rgb(189, 206, 185);
+    text-align: center;
+    height: 180px;
+    width: 100%;
+}
+.graphLeftDetailsMiddleBox
+{
+    justify-content: center;
+    background-color: rgb(134, 168, 125);
+    text-align: center;
+    height: 180px;
+    width: 100%;
+}
+.graphLeftDetailsLastBox
+{
+    justify-content: center;
+    background-color: rgb(60, 105, 48);
+    text-align: center;
+    height: 180px;
+    width: 100%;
+}
+.graphChartBox
+{
+	background-color:rgb(96, 96, 96);
+    text-align: center;
+    height: 100%;
+    width: 800px;
+    margin-left: 10px;
+}

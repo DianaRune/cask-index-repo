@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+   <link rel="stylesheet" type="text/css" href="css/page-header-format.css">
+   <link rel="stylesheet" type="text/css" href="css/graph-format.css">
+   <link rel="stylesheet" type="text/css" href="css/formatting-cask-page.css">
+   <meta charset="utf-8"/>
+   <div class ="pageMargin">
+      <title>generic-cask-page</title>
+      <ul class="firstHeader-ul">
+         <li><img style="float: left; margin: 15px 0px 0px 0px;margin-left: 5%" src="https://media.discordapp.net/attachments/865374253310279703/866384940522143755/LOGO_BEST.png" alt="website-icon" width="150" height="50"></li>
+         <li><a class="firstHeader-li" class="firstHeader-li" style="margin-right: 5%" href="Home.html">BC20 Index</a></li>
+         <li><a class="firstHeader-li" href="login.html">Distillery Indexes</a></li>
+         <li><a class="firstHeader-li" href="committee.html">Regional Indexes</a></li>
+         <li><a class="firstHeader-li" href="news.html">Category Indexes</a></li>
+      </ul>
+      <nav>
+         <ul class="secondHeader-ul">
+            <div class = "centerHorizontalHeaderFormat">
+               <li><a class="secondHeader-li" href="music.html">Overview</a></li>
+               <li><a class="secondHeader-li" href="merch.html">Background</a></li>
+               <li><a class="secondHeader-li" href="forums.html">News & Research</a></li>
+            </div>
+         </ul>
+      </nav>
+      <div class ="pagePadding">
+         <h1 style="font-size:400%;font-family:monospace;color:rgb(19, 19, 19);text-align:center; padding-top: 50px;">Highlands Index</h1>
+         <div class="graphBox">
+            <div class="graphDetails">
+               <div class="graphLeftDetailsBox">
+                  <p style="font-size:150%;color:rgb(19, 19, 19);font-family:monospace;margin-top:50px;">As of Jan 2021</p>
+                  <p style="font-size:200%;color:white;font-family:monospace">$240,000</p>
+               </div>
+               <div class="graphLeftDetailsMiddleBox">
+                  <p style="font-size:150%;color:rgb(19, 19, 19);font-family:monospace;margin-top:50px;">Ranking</p>
+                  <p style="font-size:200%;color:white;font-family:monospace">1</p>
+               </div>
+               <div class="graphLeftDetailsLastBox">
+                  <p style="font-size:150%;color:rgb(19, 19, 19);font-family:monospace;margin-top:50px;">1 Years Change</p>
+                  <p style="font-size:200%;color:white;font-family:monospace">Up 1</p>
+               </div>
+            </div>
+            <div class="graphChartBox">
+               <script type="text/javascript">
+                  var can, ctx,
+                      maxVal, minVal,
+                      xScalar, yScalar,
+                      numSamples;
+                  // data sets -- set literally or obtain from an ajax call
+                  var sanDiego =  [500, 350, 300, 350, 500, 250, 200, 250, 500, 72, 70, 68];
+                  
+                  function init() {
+                      // set these values for your data
+                      numSamples = 9;
+                      maxVal = 1680;
+                      minVal = 1600;
+                      var stepSize = 10;
+                      var colHead = 50;
+                      var rowHead = 0;
+                      var margin = 0;
+                      var fixyvalue = 0;
+                      ///////////////////////////////////////////var marginXAxis = 
+                      var header = ["Mar 2020", "May 2020", "July 2020", "Sep 2020", "Nov 2020", "Jan 2021", "Feb 2021", "Mar 2021", "June 2021", "July 2021"]
+                  
+                      can = document.getElementById("can");
+                      ctx = can.getContext("2d");
+                      ctx.fillStyle = "black"
+                      ctx.font = "12pt Helvetica"
+                      // set vertical scalar to available height / data points
+                      yScalar = (500 - colHead - margin) / (maxVal - minVal);
+                      // set horizontal scalar to available width / number of samples
+                      xScalar = (900 - rowHead - fixyvalue) / numSamples;
+                  
+                  
+                      // print column header
+                      for (i = 0; i <= numSamples; i++) {
+                          var x = (i * xScalar)/1.1;
+                          ctx.fillText(header[i], x, colHead - margin + 490);
+                      }
+                  
+                      //Preparing to draw dashed background lines
+                      ctx.strokeStyle="grey"; // grey dotted lines
+                      ctx.beginPath();
+                      ctx.setLineDash([5, 5]);
+                  
+                      // print row header and draw horizontal grid lines
+                      var count = 0;
+                      for (scale = maxVal; scale >= minVal; scale -= stepSize) {
+                          var y = colHead + (yScalar * count * stepSize);
+                          ctx.fillText(scale, margin, y + margin);
+                          ctx.moveTo(rowHead, y)
+                          ctx.lineTo(can.width, y)
+                          count++;
+                      }
+                      ctx.stroke();
+                  
+                      // set a color and make one call to plotData()
+                      // for each data set
+                      ctx.strokeStyle = "rgb(45, 155, 78)";
+                      plotData(sanDiego);
+                  }
+                  
+                  function plotData(dataSet) {
+                      //Reset line from dotted to solid
+                      ctx.setLineDash([0, 0]);
+                      
+                      ctx.beginPath();
+                      ctx.moveTo(0, dataSet[0]);
+                      for (i = 1; i < numSamples; i++) {
+                         ctx.lineTo(i * xScalar, dataSet[i]);
+                      }
+                      ctx.stroke();
+                  }
+               </script>
+               </head>
+               <body onload="init()">
+                  <div text-align:center>
+                     <canvas id="can" height="550%" width="800%">
+                     </canvas>
+                     <br />
+                  </div>
+            </div>
+         </div>
+         <hr border: 10px color="grey">
+         <div class="firstRow">
+         <div class="firstBox">
+         <b><p style="font-size:225%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Highlands Index</p></b>
+         <p style="font-size:125%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Iropesum fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd</p>
+         </div>
+         <div class="secondBox">
+         <b><p style="font-size:225%;text-align:left;color:rgb(19, 19, 19);font-family:monospace;">Highlands Index</p></b>
+         <p style="font-size:125%;text-align:left;color:rgb(19, 19, 19);font-family:monospace;">Iropesum fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd</p>
+         </div>
+         <div class="thirdBox">
+         <b><p style="font-size:225%;text-align:left;color:rgb(19, 19, 19);font-family:monospace;">Highlands Index</p></b>
+         <p style="font-size:125%;text-align:left;color:rgb(19, 19, 19);font-family:monospace;">Iropesum fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd</p>
+         </div>
+         </div>
+         <div class="secondRow">
+         <div class="regionProfileBox">
+         <b><p style="font-size:225%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Region Profile</p></b>
+         <p style="font-size:125%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Iropesum fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd</p>
+         </div>
+         <div class="regionFactsBox">
+         <div class="regionFactsBoxHeader">
+         <b><p style="font-size:225%;text-align:left;color:white;font-family:monospace">Region Key Facts</p></b>
+         </div>
+         <div class="regionFactsBoxBar">
+         </div>
+         <div class="regionFactsBoxInfo">
+         <b><p style="font-size:125%;text-align:left;color:white;font-family:monospace">Year Established</b>: 1890</p>
+         <b><p style="font-size:125%;text-align:left;color:white;font-family:monospace">Owner</b>: Edigton</p>
+         <b><p style="font-size:125%;text-align:left;color:white;font-family:monospace">Production Capacity</b>: 2 Million</p>
+         </div>
+         </div>
+         </div>
+         <div class="RoRow3">
+         <div class="thirdRow">
+         <div class="topPerformingDistillery">
+         <b><p style="font-size:225%;text-align:left;color:rgb(19, 19, 19);font-family:monospace;margin-left:25px;">Top Performing Distillery</p></b>
+         <ol class="listFormat">
+         <li>Aberiour</li>
+         <br>
+         <li>Arbeg</li>
+         <br>
+         <li>Bowmore</li>
+         <br>
+         <li>Laphroaig</li>
+         <br>
+         <li>Macallan</li>
+         </ol>
+         <div class="topPerformingButton" style="margin-left:25px;">
+         View More
+         </div>
+         </div>
+         <div class="topPerformingRegions">
+         <b><p style="font-size:225%;text-align:left;color:rgb(19, 19, 19);font-family:monospace;margin-left:25px;">Top Performing Regions</p></b>
+         <ol class="listFormat">
+         <li>Islay</li>
+         <br>
+         <li>Highlands</li>
+         <br>
+         <li>Lowlands</li>
+         <br>
+         <li>Speyside</li>
+         <br>
+         <li>Campbeltown</li>
+         </ol>
+         <div class="topPerformingButton" style="margin-left:25px;">
+         View More
+         </div>
+         </div>
+         <div class="topPerformingCategories">
+         <b><p style="font-size:225%;text-align:left;color:rgb(19, 19, 19);font-family:monospace;margin-left:25px;">Top Performing Categories</p></b>
+         <ol class="listFormat">
+         <li>New Cask</li>
+         <br>
+         <li>Emerging</li>
+         <br>
+         <li>Intermidiate</li>
+         <br>
+         <li>Premium</li>
+         <br>
+         <li>Blue Chip</li>
+         </ol>
+         <div class="topPerformingButton" style="margin-left:25px;">
+         View More
+         </div>
+         </div>
+         </div>
+         </div>
+         <div class="fourthRow">
+         <p style="font-size:250%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Highlands Index</p>
+         <div class="article">
+         <img src="https://media.discordapp.net/attachments/865374253310279703/865378446207877160/graph.png" alt="EventPhoto" width="400" height="400">
+         <div class="articleContent">
+         <p style="font-size:250%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Top Performing Distillery</p>
+         <p style="font-size:150%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Iropesum fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd</p>
+         <p style="font-size:150%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Iropesum fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd</p>
+         <p style="font-size:150%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Iropesum fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd</p>
+         <br>
+         <div class="articleButton">
+         View more
+         </div>
+         </div>
+         </div>
+         <div class="article">
+         <img src="https://media.discordapp.net/attachments/865374253310279703/865378446207877160/graph.png" alt="EventPhoto" width="400" height="400">
+         <div class="articleContent">
+         <p style="font-size:250%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Top Performing Regions</p>
+         <p style="font-size:150%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Iropesum fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd</p>
+         <p style="font-size:150%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Iropesum fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd</p>
+         <p style="font-size:150%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Iropesum fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd</p>
+         <br>
+         <div class="articleButton">
+         View more
+         </div>
+         </div>
+         </div>
+         </div>
+      </div>
+      <div class="footer">
+      <div class="footerBox1">
+      <img style="float: left; margin: 0px 0px 0px 0px;" src="https://cdn.discordapp.com/attachments/865374253310279703/865568236421644308/I_C_O_N.png" alt="website-icon" width="150" height="50">
+      <br>
+      <br>
+      <br>
+      <p class="bodyTitle">Iropesum fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd fdsfsdfsd fdsfsdfsd fdsfsdfsdfdsfsdfsd</p>
+      <div class="socialMediaButton">
+      <img style="float: left; margin: 0px 0px 0px 0px;" src="https://cdn.discordapp.com/attachments/865374253310279703/865705327260205137/unknown.png" width="150" height="50">
+      </div>
+      </div>
+      <div class="footerBox2">
+      <b><p style="font-size:225%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">About us</p></b>
+      <p class="bodyTitle">About</p>
+      <p class="bodyTitle">Contact</p>
+      <p class="bodyTitle">Blogs</p>
+      <p class="bodyTitle">Privacy Policy</p>
+      </div>
+      <div class="footerBox3">
+      <b><p style="font-size:225%;text-align:left;color:rgb(19, 19, 19);font-family:monospace">Contact Us</p></b>
+      <p class="bodyTitle">sales@caskindex.com</p>
+      <p class="bodyTitle">+gx-xxxxxx xxxxx</p>
+      <b><p class="bodyTitle">Subscribe To Our Newsletter</p></b>
+      <div class="subscribeBox">
+      <form method="POST" action="/send" name="subscribeForm">
+      <input type="text" name="email" placeholder="Email" class="subscribeTxtField" id="subscribeTxtField"/>
+      <button class="subscribeBtn" style="cursor:pointer;" type="submit" onclick="submit()">
+      <p class="bodyTitle">Subscribe</p>
+      </button> 
+      </form>
+      </div>
+      </div>
+      </div>
+   </div>
+   </div>
+   <script type="text/javascript" src="app.js"></script>
+   </body>
+</html>
